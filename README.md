@@ -14,8 +14,10 @@ npm install  body-parser method-override --save //configuração dos metodos POS
 npm install bower -g //instalador de dependencia frontEnd
 npm install // verifica se tem algum pacote faltando
 bower install // verifica se tem algum pacote faltando
-
+bower install angular-route --save //instalar routes no angular
 Link aula 2
 goo.gl/FcENyk
+
+goo.gl/CkVaGd
 
 pasta node_modules é configurado para o sistema que esta rodando para aquele SO especifico, nao pode passar pra outra maquina

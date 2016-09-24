@@ -1,5 +1,10 @@
 //Public/js/controllers/ContatosController.js
 angular.module("contatooh").controller("ContatosController",
 	   function ($scope) {
-		$scope.total = 12;
+		
+		$scope.total = 0;
+		
+		$scope.incrementa = function(){
+		  $scope.total++;
+		}
 	   });
