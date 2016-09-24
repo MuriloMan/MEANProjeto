@@ -10,10 +10,10 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
+  <body ng-controller="ContatosController">
 				<h1>Welcome ao contatooh</h1>
 				<button>Novo</button>
-				<p>Contatos cadastrados : 0</p>
+				<p>Contatos cadastrados : {{ total}}</p>
 				<script src="vendor/angular/angular.js"></script>
 				<script src="js/main.js"></script>
   </body>
