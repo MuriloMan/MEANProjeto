@@ -7,4 +7,8 @@ angular.module("contatooh", ["ng-route"])
 		  templateUrl: "partials/contatos.html",
 		  controller: "ContatosController"
 		});
+		$routeProvider.when("/contatos/:contatoId", {
+		  templateUrl: "partials/contato.html",
+		  controller: "ContatoController"
+		});
 	   });
