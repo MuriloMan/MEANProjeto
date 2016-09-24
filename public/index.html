@@ -10,13 +10,21 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body ng-controller="ContatosController">
-				<h1>Welcome ao contatooh</h1>
+  <body>
+				<div ng-view>
+						<!-- espaço dinamico-->
+				</div>
+
+				<!--h1>Welcome ao contatooh</h1>
 				<button ng-click="incrementa()">Novo</button>
-				<p>Contatos cadastrados : {{ total}}</p>
+				<p>Contatos cadastrados : {{ total}}</p-->
+											
+				<!-- importação, não alterar a ordem -->
 				<script src="vendor/angular/angular.js"></script>
 				<script src="vendor/angular-route.js"></script>
 				<script src="js/main.js"></script>
 				<script src="js/controllers/ContatosController.js"></script>
+				
+				
   </body>
 </html>
