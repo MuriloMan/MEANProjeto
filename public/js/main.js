@@ -1,7 +1,7 @@
 //public/js/main.js
 
 //angular é um objeto global, acessa varios recursos do framework
-angular.module("contatooh", ["ng-route"])
+angular.module("contatooh", ["ngRoute"])
 	   .config(function ($routeProvider) {
 		$routeProvider.when("/contatos", {
 		  templateUrl: "partials/contatos.html",
@@ -9,6 +9,6 @@ angular.module("contatooh", ["ng-route"])
 		});
 		$routeProvider.when("/contatos/:contatoId", {
 		  templateUrl: "partials/contato.html",
-		  controller: "ContatoController"
+		  controller: "ContatosController"
 		});
 	   });
