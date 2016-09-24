@@ -1,0 +1,26 @@
+{
+  "name": "contatooh",
+  "description": "Lista de Contatos",
+  "main": "server.js",
+  "authors": [
+    "Eder Sotto"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "lista",
+    "contatos"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
