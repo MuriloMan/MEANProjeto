@@ -26,3 +26,4 @@ aula 3
 
 abrir git bash dentro da pasta do projeto e escrever
 bower install bootstrap --save
+bower install angular-resource --save
