@@ -6,21 +6,25 @@ and open the template in the editor.
 -->
 <html ng-app="contatooh">
   <head>
-    <title>TODO supply a title</title>
     <meta charset="UTF-8">
+    <title>Contatooh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+				<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
   </head>
-  <body>
-				
+  <body class="container">
+
 				<div ng-view>
 						<!-- espaço dinamico-->
 				</div>
-											
+
 				<!-- importação, não alterar a ordem -->
 				<script src="vendor/angular/angular.js"></script>
 				<script src="vendor/angular-route/angular-route.js"></script>
 				<script src="js/main.js"></script>
 				<script src="js/controllers/ContatosController.js"></script>
-				<script src="js/controllers/ContatoController.js"></script>
+				<script src="js/controllers/ContatoController.js"></script>				
+				<script src="vendor/jquery/dist/jquery.js"></script>
+				<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>

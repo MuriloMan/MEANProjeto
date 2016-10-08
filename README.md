@@ -21,3 +21,8 @@ goo.gl/FcENyk
 goo.gl/CkVaGd
 
 pasta node_modules é configurado para o sistema que esta rodando para aquele SO especifico, nao pode passar pra outra maquina
+
+aula 3
+
+abrir git bash dentro da pasta do projeto e escrever
+bower install bootstrap --save

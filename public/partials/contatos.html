@@ -1,5 +1,21 @@
-<div ng-controller="ContatosController">
-		<h1> Welcome ao Contatooh</h1>
-		<button ng-click="incrementa()">Novo</button>
-		<p>Contatos cadastrados : {{ total}}</p>
+<style>.cp{cursor:pointer;}</style>
+<div class="jumbotron">
+		<h1 class="text-center"> Welcome ao Contatooh</h1>
+</div>
+<button class="btn btn-primary" ng-click="incrementa()">Novo</button>
+<input type="search" placeholder="type to search" class="pull-right" ng-model="filtro"/>
+<p>Contatos cadastrados : {{ total}}</p>
+<div class="table-responsive cp">
+		<table class="table table-hover table-striped">
+				<tr>
+						<th class="text-center"> NOME </th>
+						<th class="text-center"> EMAIL</th>
+						<th class="text-center"> ACT </th>
+				</tr>
+				<tr ng-repeat="contato in contatos |filter:filtro">
+						<td><a>{{ contato.nome}}</a></td>
+						<td><a>{{ contato.email}}</a></td>
+						<td class="text-center"><button class="btn btn-warning">del</button></td>
+				</tr>
+		</table>
 </div>
