@@ -4,7 +4,7 @@ angular.module("contatooh").controller("ContatosController", function ($scope, $
     $scope.total++;
   };
   $scope.contatos = [];
-  $scope.filtro= "";
+  $scope.filtro = "";
 
   var Contato = $resource("/contatos/:id");
 
@@ -17,5 +17,11 @@ angular.module("contatooh").controller("ContatosController", function ($scope, $
     });
   }
   buscaContatos();
-  
+  $scope.remove = function (contato) {
+    Contato.delete({id: contato._id},
+		  buscaContatos,//success 2nd function
+		  function (erro) { //fail 3rd function
+		    console.log("Erro ao recarregar lista de contatos: " + erro);
+		  });
+  };
 });
