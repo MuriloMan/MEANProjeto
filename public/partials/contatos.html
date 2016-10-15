@@ -2,6 +2,9 @@
 <div class="jumbotron">
 		<h1 class="text-center"> Welcome ao Contatooh</h1>
 </div>
+
+
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
 <button class="btn btn-primary" ng-click="incrementa()">Novo</button>
 <input type="search" placeholder="type to search" class="pull-right" ng-model="filtro"/>
 <p class="text-info" ng-show="contatos.length">Contatos cadastrados : {{ contatos.length}}</p>
