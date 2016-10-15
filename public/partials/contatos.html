@@ -18,8 +18,8 @@
 						<th class="text-center"> ACT </th>
 				</tr>
 				<tr ng-repeat="contato in contatos|filter:filtro">
-						<td><a>{{ contato.nome}}</a></td>
-						<td><a>{{ contato.email}}</a></td>
+						<td><a ng-href="#/contatos/{{contato._id}}">{{ contato.nome}}</a></td>
+						<td><a ng-href="#/contatos/{{contato._id}}">{{ contato.email}}</a></td>
 						<td class="text-center"><button class="btn btn-warning" ng-click="remove(contato)">del</button></td>
 				</tr>
 		</table>
