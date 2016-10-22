@@ -31,9 +31,9 @@ bower install angular-resource --save
 iniciar mongoDB
 mongo --port 27017 --host localhost
 
-aula 4
+aula 5
 npm install mongodb --save
-npm install monoose --save
+npm install mongoose --save
 
 //rodar mongo notebook fernando
 mongod --storageEngine=mmapv1
@@ -43,4 +43,3 @@ use contatooh
 var contato = {"nome" : "contato teste", "email" : "teste@teste.com"}
 db.contatos.insert(contato);
 db.contatos.find()//retorna todos da tabela contatos
-
