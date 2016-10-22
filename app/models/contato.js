@@ -12,4 +12,5 @@ module.exports = function (){
 	 index:{unique:true}/*fazer email ser unico, nao pode ter 2 com mesmo email*/
     }
   });
+  return mongoose.model('Contato', schema);
 };
