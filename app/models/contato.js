@@ -7,7 +7,7 @@ module.exports = function () {
 	 required: true
     },
     email: {
-	 type: [String],
+	 type: String,//type: [String] para fazer array 
 	 required: true,
 	 index: {unique: true}/*fazer email ser unico, nao pode ter 2 com mesmo email*/
     },

@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   /*CRUD MONGODB & NODEJS*/
   controller.listaContatos = function (req, res) {
-    var promise = Contato.find().exec()
+    var promise = Contato.find().populate('emergencia').exec()
 		  .then(function (contatos) {
 		    res.json(contatos);
 		  }, function (erro) {
@@ -23,7 +23,15 @@ module.exports = function (app) {
 	 res.status(404).json(erro);
     });
   };
-  controller.removeContato = function (req, res) {};
+  controller.removeContato = function (req, res) {
+    var _id = req.params.id;
+    Contato.remove({'_id':_id}).exec().then(
+		  function(){
+		    res.status(204).end();
+		  },function(){
+		    return console.error(erro);
+		  });
+  };
   controller.salvaContato = function (req, res) {
     var _id = req.params.id;
     req.body.emergencia = req.body.emergencia || null;
