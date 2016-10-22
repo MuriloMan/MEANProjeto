@@ -18,8 +18,10 @@ module.exports = function() {
 	app.use(bodyParser.json());
 	app.use(require('method-override')());
 	
-	load('models', {cwd: 'app'}).then('controllers').then('routes')
-	.into(app);
+	load('models', {cwd: 'app'})
+		   .then('controllers')
+		   .then('routes')
+		   .into(app);
 	
 	return app;
 };

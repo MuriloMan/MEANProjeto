@@ -1,5 +1,6 @@
 //config /database.js
 var mongoose = require('mongoose');
+mongoose.set('debug',true);
 module.exports = function (uri) {
   mongoose.connect(uri);
   mongoose.connection.on('connected', function () {
