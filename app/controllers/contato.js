@@ -26,6 +26,7 @@ module.exports = function (app) {
   controller.removeContato = function (req, res) {};
   controller.salvaContato = function (req, res) {
     var _id = req.params.id;
+    req.body.emergencia = req.body.emergencia || null;
     if (_id) {
 	 Contato.findByIdAndUpdate(_id, req.body).exec()
 		    .then(function (contato) {
@@ -46,5 +47,6 @@ module.exports = function (app) {
 		    });
     }
   };
+  
   return controller;
 };

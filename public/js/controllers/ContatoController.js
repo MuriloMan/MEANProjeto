@@ -9,6 +9,9 @@ angular.module('contatooh').controller('ContatoController',
 		    $scope.mensagem = {texto: 'Falha ao salvar'};
 		  });
 		};
+		Contato.query(function(contatos){
+		  $scope.contatos = contatos;
+		});
 		if ($routeParams.contatoId) {
 		  //var Contato = $resource('/contatos/:id');//:id tem q ser igual ao
 		  Contato.get({id: $routeParams.contatoId}, //:id dessa linha
