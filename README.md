@@ -47,5 +47,8 @@ db.contatos.find()//retorna todos da tabela contatos
 
 //aula 6
 npm install passport --save
-npm install express-session cookie-parser --save
-npm install passport-github passport-facebook --save
+npm install express-session --save
+npm install cookie-parser --save
+npm install passport-github --save
+npm install passport-facebook --save
+npm install mongoose-findorcreate --save
