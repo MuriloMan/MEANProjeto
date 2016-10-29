@@ -31,7 +31,7 @@ bower install angular-resource --save
 iniciar mongoDB
 mongo --port 27017 --host localhost
 
-aula 5
+//aula 5
 npm install mongodb --save
 npm install mongoose --save
 
@@ -43,3 +43,9 @@ use contatooh
 var contato = {"nome" : "contato teste", "email" : "teste@teste.com"}
 db.contatos.insert(contato);
 db.contatos.find()//retorna todos da tabela contatos
+
+
+//aula 6
+npm install passport --save
+npm install express-session cookie-parser --save
+npm install passport-github passport-facebook --save

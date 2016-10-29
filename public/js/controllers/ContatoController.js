@@ -1,18 +1,10 @@
 angular.module('contatooh').controller('ContatoController',
 	   function ($scope, $routeParams, Contato) {
-		$scope.salva = function () {
-		  $scope.contato.$save()
-				.then(function () {
-				  $scope.mensagem = {texto: 'salvo com sucesso'};
-				  $scope.contato = new Contato();
-				}).catch(function (erro) {
-		    $scope.mensagem = {texto: 'Falha ao salvar'};
-		  });
+		$scope.optionsFilter = function () {
+		  return (contato._id != $scope._id);
 		};
-		Contato.query(function(contatos){
-		  $scope.contatos = contatos;
-		});
 		if ($routeParams.contatoId) {
+		  $scope._id = $routeParams.contatoId;
 		  //var Contato = $resource('/contatos/:id');//:id tem q ser igual ao
 		  Contato.get({id: $routeParams.contatoId}, //:id dessa linha
 				function (contato) {
@@ -25,4 +17,16 @@ angular.module('contatooh').controller('ContatoController',
 		} else {
 		  $scope.contato = new Contato();
 		}
+		$scope.salva = function () {
+		  $scope.contato.$save()
+				.then(function () {
+				  $scope.mensagem = {texto: 'salvo com sucesso'};
+				  $scope.contato = new Contato();
+				}).catch(function (erro) {
+		    $scope.mensagem = {texto: 'Falha ao salvar'};
+		  });
+		};
+		Contato.query(function (contatos) {
+		  $scope.contatos = contatos;
+		});
 	   });
